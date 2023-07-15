@@ -1,0 +1,101 @@
+/* ---------- huvudelen ------------------------ */
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    overflow-x: hidden;
+}
+
+canvas{
+    margin: 0%;
+}
+
+p{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* ------------ Text med uppdaterande information -----------*/
+.info{
+    height: auto;
+    width: 100%;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    margin-left: 2.5%;
+    margin-right: auto;
+    padding: 0%;
+}
+.textbox{
+    height: auto;
+    width: auto;
+    display: inline;
+    padding: 0%;
+    margin-right: 30px;
+}
+.info .textbox p {
+    margin: 0%;
+    padding: 0%;
+    display: inline;
+    font-size: 20px;
+    color: white;
+}
+
+/* --------------- rubrik ----------------- */
+.rubrik{
+    width: auto;
+    height: auto;
+    text-align: center;    
+}
+.rubrik h2{
+    color: white;
+    text-align: center;
+    display: inline;
+    font-size: 1.5em;
+}
+
+/* ------------------ Information längre ner ------------ */
+.minicontainer{
+    margin-top: 40px;
+    height: auto;
+    width: 100%;
+}
+.infobox{
+    height: auto;
+    width: 44%;
+    float: left;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+}
+.minicontainer .infobox p{
+    color: white;
+}
+.minicontainer .infobox h3{
+    color: white;
+    text-align: center;
+}
+
+/* Tillhörande responsivitet */
+/* Gör så att infoboxarna står vertikalt istället för horisontellt*/
+@media screen and (max-width: 900px){
+    .infobox{
+        width: 95%;
+        float: none;
+    }
+}
+
+/* ------------ Footer --------------- */
+.footer{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.footer p {
+    color: white;
+    text-align: center;
+}
+.footer hr{
+    height:2px;
+    border-width:0;
+    color:white;
+    background-color:whitesmoke;
+    width: 80%;
+}

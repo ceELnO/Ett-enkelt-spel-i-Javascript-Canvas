@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/yellow-circle.png"> <!--logga som syns i fliken-->
+    <title> Nukleos </title>
+
+    <!-- Externa filer-->
+    <link href="style.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+
+<!-- Canvas + JavaScript-->
+<canvas id="myCanvas"></canvas>
+<script src="canvas.js"></script>
+
+<!-- För att göra programmet mindre resurskrävande så delas paragrapherna upp --> 
+<!-- Så att texten ska uppdateras då det bara är ett nummer som bör uppdateras-->
+<!-- Exempel: spelaren förlorar ett liv, då istället för att ersätta en hel paragraph så ersätter vi bara nummret efter "Life: " -->
+<!-- paragrapherna är stylade i style.css så att de syns i rad -->
+<div class="info">
+
+    <!-- Amount of life -->
+    <div class = "textbox">
+        <p>Life: </p>
+        <p id = "P_Life"> 0 </p> <!-- Default värdet är noll-->
+    </div>
+
+    <!-- Number of circles -->
+    <div class = "textbox">
+        <p>Enemies: </p>
+        <p id = "C_amount"> 0 </p>
+    </div>
+
+    <!-- HighScore-->
+    <div class = "textbox">
+        <p>Highscore: </p>
+        <p id = "H_score"> 0 </p>
+    </div>
+
+    <!-- Player Score -->
+    <div class = "textbox">
+        <p>Score: </p>
+        <p id = "P_score"> 0 </p>
+    </div>
+</div>
+
+<!-- Rubrik-->
+<div class = "rubrik">
+    <h2>Nukleos</h2>
+</div>
+
+<!-- Spel information längre ner-->
+<div class = "minicontainer">
+    
+    <!-- Box 1-->
+    <div class = "infobox">
+
+        <h3> Instruktioner </h3>
+
+        <!-- Texten har -->
+        
+        <p> 
+            Detta är ett spel där man kontrollerar en cirkel och ska försöka överleva så länge som möjligt. 
+            <strong> Spelarens objektet är den gula cirkeln </strong> som <strong> kontrolleras med "piltangenterna" och/eller "WASD" </strong> 
+            och startar lite till vänster om mitten av skärmen. 
+            För att överleva behöver spelaren kontrollera sitt objekt så att den inte kommer i kontakt med de blå cirklarna. 
+            Varje gång spelarobjektet nuddar en av de blå cirklarna kommer den cirkeln att tas bort 
+            vilket också leder till att spelaren förlora ett liv. När liven tar slut är spelet över. 
+            Försök att överleva så länge som möjligt och få ett högt score. Lycka till!
+            <br> <br>
+
+            Spelet blir bara svårare och svårare. Antalet cirklar ökas hela tiden, försök att överleva så länge som möjligt. 
+            Du behöver dock inte oroa dig för att cirklarna ska skapas på spelarenobejectets position, 
+            de skapas på den kant som spelaren är längst bort ifrån.
+            <br> <br>
+
+            Spelet inkluderar även flera olika sorters modes som ändra på fiendecirklarnas attributer 
+            som exempelvis färg, antal och storlek. För att<strong> ändra mode klicka på “F” </strong>, 
+            see “input” för svarsalternativen. Det går även att snabbt <strong> starta om spelet genom att klicka på “R” </strong> 
+            och <strong> pausa spelet genom att klicka på “space”</strong>.
+            <br> <br> <br>
+
+
+            TL:DR; <br>
+            Spelare rörs med --> <strong> pilltangenterna och/eller WASD </strong> <br>
+            Starta om spelet --> <strong> R </strong> <br>
+            Ändra preset (see Input) --> <strong> F </strong> <br>
+            pausa spelet --> <strong> space </strong>
+            <br> <br>
+        </p>
+    </div>
+
+    <!-- Box 2-->
+    <div class = "infobox">
+
+        <h3> Input </h3>
+
+        <p> 
+            Spelet har flera olika modes, dessa ändrar exempelvis färg, antal och storlek. klicka på “T” för att nå detta. 
+            Alternativen står nedan, skriv in antingen numret eller färgen i popup boxen för att ändra mode. 
+            <strong> Exempel: “1” eller “blue” , “2” eller “cyan”. </strong> Färgerna som står nedan har motsvarande färger i css.
+            <br> <br>
+
+            Färgerna är uppdelade i tre grupper indikerat med dubbla radbrytning, första gruppen har medelstora cirklar, 
+            andra har massor med små långsam cirklar och den sista har små snabba cirklar.
+            När du går neråt i en grupp blir den mer och mer extremt.
+            <br> <br>
+
+            1. blue <br>
+            2. cyan <br>
+            3. purple
+            <br> <br>
+            
+            4. darkgreen <br>
+            5. lime <br>
+            6. white
+            <br> <br>
+            
+            7. brown <br>
+            8. red <br>
+            9. hotpink <br>
+            10. darkslategrey
+        </p>
+    </div>
+
+</div>
+
+<!-- Footer-->
+<div class = "footer">
+    
+    <hr>
+    <p>
+        Av: Harry <br>
+        Datum: 12/5/2021 <br> 
+    </p>
+
+</div>
+
+</body>
+</html>
